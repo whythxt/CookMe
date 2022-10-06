@@ -35,7 +35,6 @@ struct CategoryView: View {
             }
             .navigationTitle(category.rawValue + "s")
             .navigationBarTitleDisplayMode(.inline)
-            .environmentObject(DataController())
         }
     }
 }

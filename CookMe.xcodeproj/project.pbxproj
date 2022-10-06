@@ -23,6 +23,7 @@
 		AB01B53928E5FF7B00F794BD /* PhotosPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01B53828E5FF7B00F794BD /* PhotosPickerModel.swift */; };
 		AB01B53B28E601BD00F794BD /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01B53A28E601BD00F794BD /* Media.swift */; };
 		AB21272B28E77343008FCF51 /* StretchingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21272A28E77343008FCF51 /* StretchingHeader.swift */; };
+		AB76405428EF3BF600CF123E /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB76405328EF3BF600CF123E /* Favorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		AB01B53828E5FF7B00F794BD /* PhotosPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerModel.swift; sourceTree = "<group>"; };
 		AB01B53A28E601BD00F794BD /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		AB21272A28E77343008FCF51 /* StretchingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingHeader.swift; sourceTree = "<group>"; };
+		AB76405328EF3BF600CF123E /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				AB01B52B28E32D2E00F794BD /* Recipe.swift */,
 				AB01B53A28E601BD00F794BD /* Media.swift */,
+				AB76405328EF3BF600CF123E /* Favorites.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				AB01B52028E32B6D00F794BD /* HomeView.swift in Sources */,
 				AB01B51328E32A9C00F794BD /* ContentView.swift in Sources */,
 				AB01B52F28E32FA900F794BD /* RecipeCard.swift in Sources */,
+				AB76405428EF3BF600CF123E /* Favorites.swift in Sources */,
 				AB01B52628E32B9500F794BD /* FavoritesView.swift in Sources */,
 				AB01B53928E5FF7B00F794BD /* PhotosPickerModel.swift in Sources */,
 				AB01B53428E3394700F794BD /* CategoryView.swift in Sources */,

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var vm = DataController()
+    @StateObject var favorites = Favorites()
+
     @SceneStorage("selectedView") var selectedView: String?
 
     var body: some View {
@@ -32,6 +34,7 @@ struct ContentView: View {
                 }
         }
         .environmentObject(vm)
+        .environmentObject(favorites)
     }
 }
 

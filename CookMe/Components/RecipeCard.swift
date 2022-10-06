@@ -10,6 +10,8 @@ import SwiftUI
 struct RecipeCard: View {
     var recipe: Recipe
 
+    @EnvironmentObject var favorites: Favorites
+
     var body: some View {
         ZStack {
             if recipe.image == nil {
@@ -30,11 +32,23 @@ struct RecipeCard: View {
                 .shadow(color: .black, radius: 3)
                 .padding(3)
         }
+        .contextMenu {
+            Button(favorites.contains(recipe) ? "Remove from Favorites" : "Add to Favorites") {
+                if favorites.contains(recipe) {
+                    favorites.remove(recipe)
+                    favorites.save()
+                } else {
+                    favorites.add(recipe)
+                    favorites.save()
+                }
+            }
+        }
     }
 }
 
 struct RecipeCard_Previews: PreviewProvider {
     static var previews: some View {
         RecipeCard(recipe: .example)
+            .environmentObject(Favorites())
     }
 }
