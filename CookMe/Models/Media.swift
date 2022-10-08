@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Media: Identifiable {
     var id = UUID()
-    var image: Image
+//    var image: Image
+    var image: UIImage
     var data: Data
 }

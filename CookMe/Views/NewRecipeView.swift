@@ -56,7 +56,7 @@ struct NewRecipeView: View {
                         Image(systemName: "photo.fill")
                             .font(.callout)
                     } else {
-                        pm.loadedImage?.image
+                        Image(uiImage: pm.loadedImage!.image)
                             .resizable()
                             .scaledToFit()
                             .padding()
@@ -70,6 +70,7 @@ struct NewRecipeView: View {
                 Button("Save") {
                     let newRecipe = Recipe(
                         name: name,
+                        image: pm.loadedImage?.image.base64,
                         description: description,
                         ingredients: ingredients.replacingOccurrences(of: ", ", with: "\n"),
                         category: category

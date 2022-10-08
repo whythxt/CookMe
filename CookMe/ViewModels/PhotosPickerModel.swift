@@ -25,7 +25,8 @@ class PhotosPickerModel: ObservableObject {
                 switch result {
                     case .success(let data):
                         if let data, let image = UIImage(data: data) {
-                            self.loadedImage = (.init(image: Image(uiImage: image), data: data))
+//                            self.loadedImage = (.init(image: Image(uiImage: image), data: data))
+                            self.loadedImage = (.init(image: image, data: data))
                         }
                     case .failure(let failure):
                         print(failure)

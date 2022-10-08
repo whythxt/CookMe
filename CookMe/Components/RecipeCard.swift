@@ -17,13 +17,13 @@ struct RecipeCard: View {
             if recipe.image == nil {
                 Image("image1")
             } else {
-                Image(recipe.image!)
+                Image(uiImage: (recipe.image?.imageFromBase64)!)
                     .resizable()
                     .scaledToFill()
             }
         }
         .frame(width: 150, height: 250)
-        .blur(radius: recipe.image == nil ? 3 : 0)
+        .blur(radius: 1.5)
         .clipShape(RoundedRectangle(cornerRadius: 25))
         .overlay(alignment: .bottom) {
             Text(recipe.name)

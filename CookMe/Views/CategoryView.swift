@@ -18,7 +18,7 @@ struct CategoryView: View {
         NavigationStack {
             VStack {
                 if vm.sort(category: category).isEmpty {
-                        Text("Your favorite \(category.rawValue.lowercased() + "s") will be displayed here.")
+                        Text("Your \(category.rawValue.lowercased() + "s") will be displayed here.")
                 } else {
                     ScrollView(showsIndicators: false) {
                         LazyVGrid(columns: columns, spacing: 20) {
