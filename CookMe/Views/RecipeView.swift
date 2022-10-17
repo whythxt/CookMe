@@ -10,20 +10,25 @@ import SwiftUI
 struct RecipeView: View {
     var recipe: Recipe
 
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
                 StretchingHeader {
-                    if recipe.image == nil {
-                        Image("image1")
-                            .resizable()
-                            .scaledToFill()
-
-                    } else {
-                        Image(recipe.image!)
-                            .resizable()
-                            .scaledToFill()
-                    }
+//                    if recipe.image == nil {
+//                        Image("image1")
+//                            .resizable()
+//                            .scaledToFill()
+//
+//                    } else {
+//                        Image(recipe.image!)
+//                            .resizable()
+//                            .scaledToFill()
+//                    }
+                    Image("image1")
+                        .resizable()
+                        .scaledToFill()
                 }
                 .frame(height: 200)
 
@@ -61,11 +66,26 @@ struct RecipeView: View {
             }
         }
         .edgesIgnoringSafeArea(.all)
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .foregroundColor(.white)
+                        .font(.title2)
+                        .bold()
+                }
+            }
+        }
     }
 }
 
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeView(recipe: .example)
+        NavigationStack {
+            RecipeView(recipe: .example)
+        }
     }
 }
